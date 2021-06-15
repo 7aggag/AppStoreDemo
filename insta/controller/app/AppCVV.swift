@@ -23,6 +23,8 @@ class AppCVV: UICollectionViewController , UICollectionViewDelegateFlowLayout {
         return iv
     }()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(actv)
@@ -68,12 +70,27 @@ class AppCVV: UICollectionViewController , UICollectionViewDelegateFlowLayout {
         self.collectionView.reloadData()
         
     }}
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let redcontroller = UIViewController()
+        redcontroller.view.backgroundColor = .red
+        navigationController?.pushViewController(redcontroller, animated: true)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reId, for: indexPath) as! AppCell
         let appgroup = appgroup[indexPath.item]
         cell.namelb.text = appgroup.feed.title
         cell.horizontalcontroller.appgroup = appgroup
         cell.horizontalcontroller.collectionView.reloadData()
+        cell.horizontalcontroller.didselecthandler = { [weak self ] FeedResults in
+            let Controllervc = AppDetailVC()
+            Controllervc.navigationItem.title = "\(FeedResults.name)"
+            Controllervc.navigationItem.largeTitleDisplayMode = .never
+            self?.navigationController?.pushViewController(Controllervc, animated: true)
+        }
+        
+        
         return cell
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

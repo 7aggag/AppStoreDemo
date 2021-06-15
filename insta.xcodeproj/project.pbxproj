@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5213C9DA266BD4F900DF74DF /* BetterSnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213C9D9266BD4F900DF74DF /* BetterSnappingLayout.swift */; };
+		5213C9DC266BD76300DF74DF /* SnapingHorizantalVCC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213C9DB266BD76300DF74DF /* SnapingHorizantalVCC.swift */; };
 		52421EB72663C7300022F336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52421EB62663C7300022F336 /* AppDelegate.swift */; };
 		52421EB92663C7300022F336 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52421EB82663C7300022F336 /* SceneDelegate.swift */; };
 		52421EBB2663C7300022F336 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52421EBA2663C7300022F336 /* ViewController.swift */; };
@@ -14,6 +16,7 @@
 		52421EC02663C7300022F336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52421EBF2663C7300022F336 /* Assets.xcassets */; };
 		52421EC32663C7300022F336 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52421EC12663C7300022F336 /* LaunchScreen.storyboard */; };
 		52620CB1266932E40021C131 /* AppGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52620CB0266932E40021C131 /* AppGroups.swift */; };
+		52899B6F2678C4E100D2F0CD /* AppDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52899B6E2678C4E100D2F0CD /* AppDetailVC.swift */; };
 		52D9C17B2663CA9E00174BB9 /* BaseTabarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C17A2663CA9E00174BB9 /* BaseTabarController.swift */; };
 		52D9C17D2663DFC600174BB9 /* AppSearchCVV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C17C2663DFC600174BB9 /* AppSearchCVV.swift */; };
 		52D9C181266403E600174BB9 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9C180266403E600174BB9 /* SearchResultCell.swift */; };
@@ -33,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		0475B675AF59D25AC03A7D3A /* Pods-insta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-insta.debug.xcconfig"; path = "Target Support Files/Pods-insta/Pods-insta.debug.xcconfig"; sourceTree = "<group>"; };
+		5213C9D9266BD4F900DF74DF /* BetterSnappingLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetterSnappingLayout.swift; sourceTree = "<group>"; };
+		5213C9DB266BD76300DF74DF /* SnapingHorizantalVCC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapingHorizantalVCC.swift; sourceTree = "<group>"; };
 		52421EB32663C7300022F336 /* insta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = insta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52421EB62663C7300022F336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52421EB82663C7300022F336 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		52421EC22663C7300022F336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52421EC42663C7300022F336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52620CB0266932E40021C131 /* AppGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroups.swift; sourceTree = "<group>"; };
+		52899B6E2678C4E100D2F0CD /* AppDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailVC.swift; sourceTree = "<group>"; };
 		52D9C17A2663CA9E00174BB9 /* BaseTabarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabarController.swift; sourceTree = "<group>"; };
 		52D9C17C2663DFC600174BB9 /* AppSearchCVV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchCVV.swift; sourceTree = "<group>"; };
 		52D9C180266403E600174BB9 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
@@ -110,6 +116,14 @@
 			path = insta;
 			sourceTree = "<group>";
 		};
+		52899B6D2678C4AF00D2F0CD /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				52899B6E2678C4E100D2F0CD /* AppDetailVC.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		52D9C17E2664023F00174BB9 /* controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				52D9C1842664E1F300174BB9 /* 05 UIView+Layout.swift */,
+				5213C9D9266BD4F900DF74DF /* BetterSnappingLayout.swift */,
 				52D9C19226653E4E00174BB9 /* exten.swift */,
 			);
 			path = Extension;
@@ -160,9 +175,11 @@
 		52D9C18E2665389F00174BB9 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				52899B6D2678C4AF00D2F0CD /* Details */,
 				52D9C18C2665357600174BB9 /* AppCVV.swift */,
 				52D9C19426662FFC00174BB9 /* AppHorizontal.swift */,
 				52D9C19A2667B1A700174BB9 /* AppHeaderHorizontal.swift */,
+				5213C9DB266BD76300DF74DF /* SnapingHorizantalVCC.swift */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -314,6 +331,7 @@
 				52620CB1266932E40021C131 /* AppGroups.swift in Sources */,
 				52D9C19D2667B6F900174BB9 /* AppHeaderCell.swift in Sources */,
 				52421EB72663C7300022F336 /* AppDelegate.swift in Sources */,
+				52899B6F2678C4E100D2F0CD /* AppDetailVC.swift in Sources */,
 				52D9C1882664E95C00174BB9 /* Services.swift in Sources */,
 				52D9C1912665395300174BB9 /* AppCell.swift in Sources */,
 				52D9C19B2667B1A700174BB9 /* AppHeaderHorizontal.swift in Sources */,
@@ -323,7 +341,9 @@
 				52D9C197266656DE00174BB9 /* HorizontalAppCell.swift in Sources */,
 				52D9C1992667ABC900174BB9 /* AppsHeader.swift in Sources */,
 				52421EB92663C7300022F336 /* SceneDelegate.swift in Sources */,
+				5213C9DC266BD76300DF74DF /* SnapingHorizantalVCC.swift in Sources */,
 				52D9C19526662FFC00174BB9 /* AppHorizontal.swift in Sources */,
+				5213C9DA266BD4F900DF74DF /* BetterSnappingLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

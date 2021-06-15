@@ -8,10 +8,13 @@
 import UIKit
 
 
-class AppHorizontal: UICollectionViewController,UICollectionViewDelegateFlowLayout {
+class AppHorizontal: horizantalspaninng,UICollectionViewDelegateFlowLayout {
 
     private let reid = "id22"
     var appgroup:AppGroup?
+    var didselecthandler : ((FeedResults) -> ())?
+        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Register cell classes
@@ -20,14 +23,17 @@ class AppHorizontal: UICollectionViewController,UICollectionViewDelegateFlowLayo
             layout.scrollDirection = .horizontal
         }
         collectionView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        collectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
+
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let app = appgroup?.feed.results[indexPath.item]{
+                didselecthandler?(app)
+        }
+        
     }
 
-    init() {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-    }
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return appgroup?.feed.results.count ?? 0
     }

@@ -9,9 +9,7 @@ import Foundation
 import UIKit
 
 class services {
-    
     static let shared = services()
-    
     func fetching (searchtxt : String , completion : @escaping([result])->()) {
         guard let url = URL(string:"https://itunes.apple.com/search?term=\(searchtxt)&entity=software") else {return}
         URLSession.shared.dataTask(with: url) { data, ress, err in
@@ -19,7 +17,6 @@ class services {
                 print("ERROR",err)
                 return
             }
-            //scuss
         guard let data = data else {return}
             do{
                 let dat=try JSONDecoder().decode(Results.self, from: data)
@@ -35,26 +32,20 @@ class services {
         guard let url = URL(string: "https://api.letsbuildthatapp.com/appstore/social") else {return}
         URLSession.shared.dataTask(with: url) { data, res, err in
             if let err = err {
-                completion(nil,err)
-            }
+                completion(nil,err)}
             do {
                 let dat = try JSONDecoder().decode([appheaderdata].self, from: data!)
-                completion(dat, nil)
-            }
+                completion(dat, nil)}
             catch let jsErr{
                 print("Json error", jsErr)
-            }
-        }.resume()
+            }}.resume()
     }
     func fetchingTopApp (completion :@escaping(AppGroup? , Error? )->()) {
         let url = "https://rss.itunes.apple.com/api/v1/us/ios-apps/top-free/all/10/explicit.json"
-        fetchingappgroup(urlstring: url, completion: completion)
-    }
-
+        fetchingappgroup(urlstring: url, completion: completion)}
     func fetchingTopGross (completion :@escaping(AppGroup? , Error? )->()) {
         let url = "https://rss.itunes.apple.com/api/v1/us/ios-apps/top-grossing/all/10/explicit.json"
         fetchingappgroup(urlstring: url, completion: completion)
-        
     }
     func fetchingTopGames (completion :@escaping(AppGroup? , Error? )->()) {
        let url = "https://rss.itunes.apple.com/api/v1/us/ios-apps/new-games-we-love/all/10/explicit.json"
@@ -69,7 +60,6 @@ class services {
             if let err = err {
                 completion(nil, err)
                 return
-                
             }
             do {
                 let objects = try JSONDecoder().decode(T.self, from: data!)

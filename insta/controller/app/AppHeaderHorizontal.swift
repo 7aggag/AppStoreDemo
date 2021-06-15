@@ -9,7 +9,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class AppHeaderHorizontal: UICollectionViewController , UICollectionViewDelegateFlowLayout {
+class AppHeaderHorizontal: horizantalspaninng , UICollectionViewDelegateFlowLayout {
 
     var result = [appheaderdata]()
     
@@ -20,15 +20,12 @@ class AppHeaderHorizontal: UICollectionViewController , UICollectionViewDelegate
         collectionView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
-        }}
-    
-    init() {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+        }
+        collectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
+
+}
+
+ 
     // MARK: UICollectionViewDataSource
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -47,8 +44,6 @@ class AppHeaderHorizontal: UICollectionViewController , UICollectionViewDelegate
         cell.img.sd_setImage(with: URL(string: res.imageUrl))
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 0, left: 16, bottom: 0, right: 0)
-    }
+
 }
+
